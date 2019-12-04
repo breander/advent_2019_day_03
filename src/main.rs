@@ -20,7 +20,7 @@ fn day1(){
 
     for w1 in wire1_pos{
         for w2 in &wire2_pos{
-            if w1 == *w2{
+            if w1.0 == w2.0 && w1.1 == w2.1{
                 let distance = calculate_manhattan_distance(0, 0, w2.0, w2.1);
 
                 if distance < shortest{
